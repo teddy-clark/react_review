@@ -8,13 +8,45 @@
       // Select the div element with 'app' id
       const app = document.getElementById('app');
 
-      function Header() {
-        return <h1>Develop. Preview. Ship.</h1>;
+      // function Header({ title }) {
+        // console.log(title);
+        // return <h1>{title}</h1>;
+      // }
+
+      // object property
+      // function Header( props ) {
+      //   console.log(props.title);
+      //   // since below is html, need {} to write js
+      //   return <h1>{props.title}</h1>;
+      // }
+
+      // template literal
+      // function Header( {title} ) {
+      //   console.log(title);
+      //   // since below is html, need {} to write js
+      //   return <h1>{`Cool ${title}`}</h1>;
+      // }
+
+      // returned value of a function
+      // function createTitle(title) {
+      //   if (title) {
+      //     return title;
+      //   } else {
+      //     return 'Default title';
+      //   }
+      // }
+      // function Header({title}) {
+      //   return <h1>{createTitle(title)}</h1>
+      // }
+
+      function Header({ title }) {
+        return <h1>{title ? title: 'Default title'}</h1>
       }
 
       function Homepage() {
         return (
           <div>
+            <Header title="React" />
             <Header />
           </div>
         );
