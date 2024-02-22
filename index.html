@@ -8,11 +8,20 @@
       // Select the div element with 'app' id
       const app = document.getElementById('app');
 
-      function header() {
+      function Header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
+      function Homepage() {
+        return (
+          <div>
+            <Header />
+          </div>
+        );
       }
 
       const root = ReactDOM.createRoot(app);
-      root.render(<h1>Develop. Preview. Ship.</h1>);
+      root.render(<Homepage />);
 
       // // plain js
       // // Create a new H1 element
